@@ -29,11 +29,15 @@ app= graph.compile()
 
 
 ##=== creating image of that graph formed ==##
-output_path = Path("images/graph.png")
-output_path.parent.mkdir(parents=True, exist_ok=True)
+# output_path = Path("images/graph.png")
+# output_path.parent.mkdir(parents=True, exist_ok=True)
 
-png = app.get_graph().draw_mermaid_png()
+# png = app.get_graph().draw_mermaid_png()
 
-output_path.write_bytes(app.get_graph().draw_mermaid_png())
+# output_path.write_bytes(app.get_graph().draw_mermaid_png())
 
-print(f"Saved to: {output_path.resolve()}")
+# print(f"Saved to: {output_path.resolve()}")
+
+result =  app.invoke({"message": " Lodu DSA kr le"})
+
+print(result["message"])
